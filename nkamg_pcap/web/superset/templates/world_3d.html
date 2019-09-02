@@ -1,0 +1,102 @@
+{% extends "superset/theme.html" %}
+{% block head_css %}
+{{super()}}
+  <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../static/css/earthMain.css">
+{% endblock %}
+
+{% block body %}   
+  <div class="map-ctn">
+    <canvas id="mapCanvas"></canvas> 
+  </div>
+
+<!--右侧信息分类（main-3d-3.js）-->
+  <div class="attack-type-ctn" id="attack-type-ctn">
+  </div>
+<!--右侧点击弹出菜单()-->
+  <div class="top-info-ctn" id="top-info-ctn" data-trig="0">
+  
+    <div class="top-info-min" id="top-info-min">
+      <i class="icon-remove-sign"></i>
+    </div>
+
+    <div class="top-info-title" id="top-info-title">
+    </div>
+    
+    <div class="top-info-change" id="top-info-change">
+    </div>
+        
+    </div>
+
+    <div class="left-cmd-panel" id="left-cmd-panel">
+    
+      <div class="btn" id="trig-graticule" data-trig="1">
+        经纬度
+      </div>
+      
+      <div class="btn" id="trig-rotate" data-trig="1">
+        自转
+      </div>
+     
+      <div class="show-trig"  id="left-cmd-trig" data-trig="1">
+        <i class="icon-double-angle-left"></i>
+      </div>
+        
+    </div>
+
+    <div class="panel" id="panel" data-trig="1">
+    
+      <div class="title">
+        
+        <div class="atk-line title-text">
+
+          <div class="cell time">
+            时间
+          </div>
+          <div class="cell sensor">
+            传感器
+          </div>
+          <div class="cell infos">
+            类型
+          </div>
+          <div class="cell src">
+            来源
+          </div>
+          <div class="cell dst">
+            目标
+          </div>
+          <div class="cell protocal-a">
+            通信协议
+          </div>
+          <div class="cell trails">
+            威胁情报
+          </div>
+          <div class="cell references">
+            情报来源
+          </div>
+        </div>
+      </div>
+        
+      <div class="min-btn" id="panelMin">
+        <i class="icon-angle-down"></i>
+      </div>
+<!--表格数据-->
+      <div class="ctn" id="atk-ctn">
+      </div>
+      
+    </div>
+  <script src="../../static/lib/js/jquery-2.2.0.js"></script>
+  <script src="../../static/js/wsConfig.js"></script>
+  <script src="../../static/js/3d2/stationInfo.js"></script>
+  <script src="../../static/lib/js/d3.js"></script>
+  <script src="../../static/js/attackTypeConfig.js"></script>
+  <script src="../../static/lib/js/topojson.v1.min.js"></script>
+  <script src="../../static/js/moment.min.js"></script>
+  <script src="../../static/js/3d2/planetaryjs_color2.js"></script>
+  <script src="../../static/js/3d2/earthMain2.js"></script>
+  <script src="../../static/lib/js/socket.io.js"></script>
+  <script src="../../static/js/3d2/attack-ws.js"></script>
+  <script src="../../static/js/3d2/deal-ws.js"></script>
+  <script src="../../static/js/3d2/control.js"></script>
+  <script src="../../static/js/3d2/main-3d-3.js"></script>
+{% endblock %}    

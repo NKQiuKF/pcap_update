@@ -1,0 +1,64 @@
+{% extends "superset/theme.html" %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../static/css/all2.css">
+  <link rel="stylesheet" href="../../static/css/main.css">
+  {{ super() }}
+{% endblock %}
+
+{% block body %}
+<div class="main">
+  <div class="main-top">
+    <div class="part">
+      <div class="left-part" id="dash-board">
+      </div>
+      <div class="right-part" id="dash-line">
+      </div>
+      <div class="left-part-text">
+        <div class="left-part-text-line">
+          <div class="left-part-text-line-left">
+            CPU:
+          </div>
+          <div class="left-part-text-line-right" id="cpu-percentage">
+            0%
+          </div>
+        </div>
+        <div class="left-part-text-line">
+          <div class="left-part-text-line-left">
+            内存:
+          </div>
+          <div class="left-part-text-line-right" id="mem-info">
+            0M/7915M
+          </div>
+        </div>
+        <div class="left-part-text-line">
+          <div class="left-part-text-line-left">
+            磁盘:
+          </div>
+          <div class="left-part-text-line-right" id="disk-info">
+            0G/500G
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rpart" id="stacked-graph">
+    </div>
+  </div>
+  <div class="main-mid">
+      <div class="left1-part" id="pie1">
+      </div>
+      <div class="left2-part" id="pie2">
+      </div>
+      <div class="right1-part" id="pie3">
+      </div>
+      <div class="right2-part" id="pie4">
+      </div>
+  </div>
+</div>
+
+<script src="../static/lib/js/jquery-2.2.0.js"></script>
+<script src="../static/js/build/dist/echarts.js"></script>
+<script src="../static/js/all2.js"></script>
+
+{% endblock %}

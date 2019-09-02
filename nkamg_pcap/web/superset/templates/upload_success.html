@@ -1,0 +1,50 @@
+{% extends "superset/theme.html" %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../static/css/main.css">
+  {{ super() }}
+{% endblock %}
+
+{% block body %}
+<div class="main">
+    <br>
+    <br>
+    <br>
+  <h1 style="text-align:center" >上传成功 </h1>　
+    <br>
+	<br>
+	<h4 style="text-align:center" >  请耐心等待 </h4>
+    <br>
+	<h4 style="text-align:center" >　分析结果正在生成... </h4>
+	<div id="app" data-bootstrap="{{ bootstrap_data  }}" style="text-align:center" >
+		   <img src="/static/assets/images/loading.gif" style="width: 80px; margin: 10px;">
+	   </div>
+	<br>
+</div>
+
+<script src="/static/lib/js/jquery-2.2.0.js"></script>
+<script type=text/javascript>
+   var filename="{{ filename | safe  }}";
+   var data={
+   "filename":filename,
+ }
+   $.ajax({
+   type: 'GET',
+   url: /loading/,
+   data: data,
+   async: false,
+   success: function(data){
+       if(data==filename){
+           window.location.href='/superset/dashboard/'+filename+'/?preselect_filters={}';
+        }                                                             
+       else
+       {
+           window.location.href='/upload/upload';
+       }
+	 }
+         });
+</script>
+
+
+{% endblock %}

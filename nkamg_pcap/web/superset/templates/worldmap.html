@@ -1,0 +1,223 @@
+﻿{% extends "superset/theme.html"%}
+{% block title %}World Map{% endblock %}
+{% block head_css %}
+  {{ super() }}
+  <link rel="stylesheet" type="text/css" href="../../static/2d/css/ipviking.css">
+  <link rel="stylesheet" type="text/css" href="../../static/2d/css/flags.css">
+  <link rel="stylesheet" type="text/css" href="../../static/2d/css/fonts.css">
+{% endblock %}
+
+{% block body %}
+  <style>
+
+    .arc path {
+      stroke: #fff;
+    }
+
+    .no-show {
+      display: none;
+    }
+  </style>
+  <style>
+    th,tr{
+      color:#4bffff;
+    }
+  </style>
+ 
+  <div class="f16">
+
+    <div id="loading">
+      <h1>Loading...</h1>
+    </div>
+    <div id="content">
+
+
+      <div class="data box top-left gray-bg no-show">
+        <a href="#" class="toggle" data-target="#left-table-container">
+      	<div class="table-header">
+            <h1>
+              <span class="icon-open"></span>
+                攻击源
+            </h1>
+          </div>
+        </a>
+        <div id="left-table-container" class="table-container">
+          <table id="left-data">
+            <colgroup>
+              <col class="bar-col" span="1"/>
+              <col class="total-count" span="1"/>
+              <col class="data-label-small" span="1"/>
+              <col class="data-label" span="1"/>
+            </colgroup>
+            <tr>
+              <th></th>
+              <th><span class="icon-number"></span></th>
+              <th><span class="icon-country"></span></th>
+              <th>国家</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="data box top-right gray-bg no-show">
+        <a href="#" class="switch" data-default="#right-table-container" data-second="#right-chart-container">
+          <div class="table-header">
+            <h1>
+              <span class="icon-open toggle" data-target="#right-table-container"></span>
+                攻击目标 </h1>
+          </div>
+        </a>
+        <div id="right-table-container" class="table-container">
+          <table id="right-data">
+            <colgroup>
+              <col class="bar-col" span="1">
+              <col class="total-count" span="1">
+              <col class="data-label-small" span="1">
+              <col class="data-label" span="1">
+            </colgroup>
+            <tr>
+              <th></th>
+              <th><span class="icon-number"></span></th>
+              <th class="flag-col"><span class="icon-country"></span></th>
+              <th>国家</th>
+            </tr>
+          </table>
+        </div>
+        <div id="right-chart-container" class="table-container" style="display:none">
+
+        </div>
+      </div>
+
+      <div class="data bottom-right box gray-bg no-show">
+        <a href="#" class="toggle" data-target="#bottom-right-table-container">
+          <div class="table-header">
+            <h1 class="table-header">
+              <span class="icon-open"></span>
+                攻击类型
+            </h1>
+          </div>
+        </a>
+
+        <div id="bottom-right-table-container">
+          <table id="bottom-right-data">
+            <colgroup>
+              <col class="bar-col" span="1">
+              <col class="total-count" span="1">
+              <col class="data-label-small" span="1">
+              <col class="data-label" span="1">
+              <col class="port-label" span="1">
+            </colgroup>
+            <tr>
+              <th></th>
+              <th><span class="icon-number"></span></th>
+              <th><span class="icon-threattype"></span></th>
+              <th>服务</th>
+              <th>端口</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="data info box gray-bg" id="info" style="position: fixed;left: 200px;top: 50px; display: none;">
+        <a href="#" class="toggle" data-target="#info-table-container">
+          <div class="table-header">
+            <h1 class="table-header">
+              <span id="cityname"></span>受到的攻击
+            </h1>
+          </div>
+        </a>
+
+        <div id="info-table-container">
+          <table id="info-data">
+            <colgroup>
+              <col class="bar-col" span="1">
+              <col class="total-count" span="1">
+              <col class="data-label-small" span="1">
+              <col class="data-label" span="1">
+              <col class="port-label" span="1">
+            </colgroup>
+            <tr>
+              <th></th>
+              <th><span class="icon-number"></span></th>
+              <th><span class="icon-threattype"></span></th>
+              <th>服务</th>
+              <th>端口</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div id="console" class="box gray-bg">
+        <a href="#" class="toggle" data-target="#console-table-container">
+          <div class="table-header">
+            <h1 class="table-header">
+              <span class="icon-open"></span>
+                威胁感知
+            </h1>
+          </div>
+        </a>
+        <div id="console-table-container">
+          <table id="events-data" style="text-color:white">
+            <colgroup class="second-level">
+              <col class="timestamp-col" span="1">
+	      <!--              <col class="mid-col" span="1">-->
+              <col class="port-col" span="1">
+              <col class="attacker-ip-col" span="1">
+              <col class="location-col left-border" span="1">
+              <col class="service-col left-border" span="1">
+              <col class="attacker-org-col left-border" span="1">
+              <col class="attacker-org-col left-border" span="1">
+
+            </colgroup>
+           <tr class="second-level">
+              <th>    </th>
+	      <!--              <th>传感器</th>-->
+              <th>时间</th>
+              <th>类型</th>
+              <th>目标</th>
+              <th>IP地址</th>
+              <th>传感器地址</th>
+              <th>协议类型</th>
+            </tr>
+ 
+          </table>
+        </div>
+      </div>
+      <div class="info-controls">
+        <div data-paused="false" class="gray-bg controls">
+          <span class="icon-pause play-pause"></span>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="drawer">
+      <!-- <div id="nav-bottom-corner"></div> -->
+      <div id="drawer-content" class="blue-bg">
+        <div id="drawer-inner">
+          <p id="particle-legend-content"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="message-panel" class="data box">
+      <div class="table-header gray-bg">
+        <h3>Message Dialog</h3>
+      </div>
+      <div id="message-container" class="black-solid table-container">
+        <span id="message-text"></span>
+          <button id="close-button" class="-bg" gray onClick="hideMessage();">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../../static/lib/js/jquery-2.2.0.js"></script>
+  <script type="text/javascript" src="../../static/lib/js/d3.min.js"></script>
+  <script type="text/javascript" src="../../static/lib/js/queue.js"></script>
+  <script type="text/javascript" src="../../static/lib/js/topojson.v1.min.js"></script>
+  <script type="text/javascript" src="../../static/lib/js/ipviking.js"></script>
+  <script type="text/javascript" src="../../static/lib/js/presentations.js"></script>
+
+{% endblock %}
+

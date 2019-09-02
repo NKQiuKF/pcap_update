@@ -1,0 +1,28 @@
+{% extends "superset/basic.html" %}
+
+{% block head_css %}
+
+  <link rel="stylesheet" href="../../static/lib/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../static/css/main.css">
+  <link rel="stylesheet" href="../../static/css/eqp.css">
+  <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+  {{super()}}
+{% endblock %}
+
+{% block body %}
+    <div class="all-eqp" id="all-eqp">
+        <div class="clear-float" id="all-eqp-clear"></div>
+    </div>
+
+  
+  <script src="../../static/lib/js/jquery-2.2.0.js"></script>
+  <script src="../../static/lib/js/jquery.min.js"></script>
+  <script src="../../static/lib/js/bootstrap.min.js"></script>
+  <script src="../../static/lib/js/d3_eqp.min.js"></script>
+  <script src="../../static/lib/js/queue.js"></script>
+  <script src="../../static/js/main.js"></script>
+  <script src="../../static/lib/js/socket.io.js"></script>
+  <script src="../../static/js/wsConfig.js"></script>
+  <script src="../../static/js/eqp.js"></script>
+
+{% endblock %}

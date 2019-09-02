@@ -1,0 +1,16 @@
+src_ip,trail,trail_info
+60.29.153.43,180.177.232.32,proxy (suspicious)
+221.238.245.22,188.165.204.135,known attacker
+221.238.245.22,jjcwgfwdyqje.pw,tinba dga (malware)
+221.238.245.22,ygebayjak.org,locky dga (malware)
+221.238.245.22,216.245.205.106,bad reputation
+202.113.18.106,216.245.205.106,bad reputation
+202.113.18.106,180.124.78.125,bad reputation
+220.113.60.203,216.6.230.16,known attacker
+220.113.60.203,43.251.172.13,known attacker
+220.113.60.203,upgratedns.zyns.com,malware
+123.112.43.6 ,balkanium.altervista.org/p3er4s.php,ransomware (malware)
+123.112.43.6 ,70.84.177.170,known attacker
+123.112.43.6 ,ph11.dns1.us,malware
+123.112.43.6 ,www.aiucr.com,malware
+123.112.43.6 ,46.254.218.81,proxy (suspicious)

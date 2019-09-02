@@ -1,0 +1,14 @@
+feature,importance
+ratio,839
+1gram,395
+2gram,534
+3gram,472
+4gram,568
+5gram,524
+num_ratio,108
+dif_let_ratio,1642
+dif_num_ratio,112
+length,2440
+aeiouratio,1590
+lastratio,196
+changetime,94

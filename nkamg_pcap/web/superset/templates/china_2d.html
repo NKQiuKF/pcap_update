@@ -1,0 +1,118 @@
+{% extends "superset/theme.html" %}
+{% block title %}China 2D map{% endblock %}
+{% block head_css %}
+  {{ super() }}
+  <link rel="stylesheet" href="../../static/css/earthMain.css">
+  <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body %}
+  <div class="map-ctn">
+    <canvas id="mapCanvas"></canvas>
+  </div>
+
+<!--  <div id="leftCtl" class="left-ctl" data-trig="1">
+    <div id="leftCtlMin" class="left-ctl-min"></div>
+    <div class="ctl-line">
+      <button id="stopRotate">stop rotate</button>
+    </div>
+    <div class="ctl-line">
+      <button id="startRotate">start rotate</button>
+    </div>
+    <div class="ctl-line">
+      <button id="addPing">add ping</button>
+    </div>
+    <div class="ctl-line">
+      <button id="addLine">add Line</button>
+    </div>
+    <div class="ctl-line">
+      <button id="graticuleTrigger" data-need="1">graticuleTrigger</button>
+    </div>
+    <div class="ctl-line">
+      <input value="40" style="position: relative; float: left; width: 60px;" type="text" id="srcLat" placeholder="lat">
+      <input value="116" style="position: relative; float: left; width: 60px;" type="text" id="srcLng" placeholder="lng">
+    </div>
+    <div class="ctl-line">
+      <input value="0" style="position: relative; float: left; width: 60px;" type="text" id="dstLat" placeholder="lat">
+      <input value="0" style="position: relative; float: left; width: 60px;" type="text" id="dstLng" placeholder="lng">
+    </div>
+    <div class="ctl-line">
+      <button id="submitInfo" style="position: relative;">submit</button>
+    </div>
+    <div class="ctl-line">
+      <button id="fixLine" style="position: relative;">fix line</button>
+    </div>
+    <div class="ctl-line">
+      <button id="addDot" style="position: relative;">add dot</button>
+    </div>
+ <div class="ctl-line">
+      <button id="stop">stop</button>
+    </div>
+  </div>
+-->
+  <div class="attack-type-ctn" id="attack-type-ctn">
+  </div>
+
+  <div class="panel" id="panel" data-trig="1">
+    <div class="title">
+      <div class="atk-line title-text">
+
+        <div class="cell time">
+          时间
+        </div>
+        <div class="cell sensor">
+          传感器
+        </div>
+        <div class="cell infos">
+          类型
+        </div>
+        <div class="cell src">
+          来源
+        </div>
+        <div class="cell dst">
+          目标
+        </div>
+        <div class="cell protocal-a">
+          通信协议
+        </div>
+<div class="cell trails">
+          威胁情报
+        </div>
+        <div class="cell references">
+          情报来源
+        </div>
+    </div>
+  </div>
+  <div class="min-btn" id="panelMin">
+    <i class="icon-angle-down"></i>
+  </div>
+  <div class="ctn" id="atk-ctn">
+        </div>
+    </div>
+
+  <div class="top-info-ctn" id="top-info-ctn" >
+    <div class="top-info-min" id="top-info-min">
+      <i class="icon-remove-sign"></i>
+    </div>
+    <div class="top-info-title" id="top-info-title">
+    </div>
+    <div class="top-info-change" id="top-info-change">
+    </div>
+  </div>
+
+  <script src="../../static/lib/js/jquery-2.2.0.js"></script>
+  <script src="../../static/js/wsConfig.js"></script>
+  <script src="../../static/lib/js/d3.js"></script>
+  <script src="../../static/js/attackTypeConfig.js"></script>
+  <script src="../../static/lib/js/topojson.v1.min.js"></script>
+  <script src="../../static/js/moment.min.js"></script>
+  <script src="../../static/js/china/planetaryjs_cn.js"></script>
+  <script src="../../static/js/china/earthMain_cn.js"></script>
+  <script src="../../static/lib/js/socket.io.js"></script>
+  <script src="../../static/js/attack-ws.js"></script>
+  <script src="../../static/js/china/deal-ws_cn.js"></script>
+  <script src="../../static/js/control.js"></script>
+  <script src="../../static/js/china/main-3d_cn.js"></script>
+
+
+{% endblock %}

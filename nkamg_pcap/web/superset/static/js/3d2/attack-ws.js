@@ -1,0 +1,1 @@
+var AttackWS={createNew:function(b){var a={};a.host=b.host;a.port=b.port||80;a.socket=io.connect("http://"+a.host+":"+a.port);a.run=function(){a.socket.on("connect",function(c){a.socket.emit("client connect",{"client":"connect"});console.log("connected!")})};a.add=function(c){a.socket.on(c.evt,c.hdler)};return a}};

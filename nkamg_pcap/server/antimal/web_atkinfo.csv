@@ -1,0 +1,38 @@
+0,2017-07-28 08:03:16.218767,ubuntu,hacker,1.235.96.136,-,76.97,28.92,1.85.30.174,22,117.18,39.14,http,1.235.96.136,"blocklist.de (+rutgers.edu,turris.cz)",bad reputation
+1,2017-07-28 08:04:25.218767,ubuntu,hacker,216.245.205.109,-,11.47,48.33,1.85.30.174,21,117.18,39.14,TCP,216.245.205.109,bambenekconsulting.com,bad reputation
+1,2017-07-28 08:04:25.218767,ubuntu,hacker,82.205.5.241,-,-0.44,51.56,1.85.30.174,22,117.18,39.14,ICMP,82.205.5.241,bambenekconsulting.com,bad reputation
+3,2017-07-28 08:05:51.218767,ubuntu,malware,93.26.111.222,-,135.94,35.52,1.85.30.174,23,117.18,39.14,http,93.26.111.222,blocklist.de,bad reputation
+4,2017-07-28 08:06:16.218767,ubuntu,hacker,91.121.64.83,-,135.71,34.96,1.85.30.174,22,117.18,39.14,ICMP,91.121.64.83,cybercrime-tracker.net,bad reputation
+2,2017-07-28 08:07:10.218767,ubuntu,suspicious,176.126.242.49,-,-118.24,34.35,1.85.30.174,23,117.18,39.14,TCP,176.126.242.49,malwaredomains.com,bad reputation
+3,2017-07-28 08:07:16.218767,ubuntu,hacker,42.113.165.166,-,-74.01,40.9,1.85.30.174,22,117.18,39.14,ssh,42.113.165.166,(static),bad reputation
+4,2017-07-28 08:08:16.218767,ubuntu,hacker,146.185.236.162,-,-77.4,38.36,1.85.30.174,22,117.18,39.14,http,146.185.236.162,abuse.ch,bad reputation
+0,2017-07-28 08:03:16.218767,ubuntu,spammer,1.235.96.136,-,76.97,28.92,1.85.30.174,21,117.18,39.14,http,1.235.96.136,"blocklist.de (+rutgers.edu,turris.cz)",bad reputation
+1,2017-07-28 08:04:25.218767,ubuntu,hacker,216.245.205.109,-,11.47,48.33,1.85.30.174,22,117.18,39.14,ICMP,216.245.205.109,bambenekconsulting.com,bad reputation
+1,2017-07-28 08:04:25.218767,ubuntu,hacker,82.205.5.241,-,-0.44,51.56,1.85.30.174,22,117.18,39.14,http,82.205.5.241,bambenekconsulting.com,bad reputation
+3,2017-07-28 08:05:51.218767,ubuntu,hacker,93.26.111.222,-,135.94,35.52,1.85.30.174,80,117.18,39.14,TCP,93.26.111.222,blocklist.de,bad reputation
+4,2017-07-28 08:06:16.218767,ubuntu,suspicious,91.121.64.83,-,135.71,34.96,1.85.30.174,80,117.18,39.14,ICMP,91.121.64.83,cybercrime-tracker.net,bad reputation
+2,2017-07-28 08:07:10.218767,ubuntu,hacker,176.126.242.49,-,-118.24,34.35,1.85.30.174,22,117.18,39.14,TCP,176.126.242.49,malwaredomains.com,bad reputation
+3,2017-07-28 08:07:16.218767,ubuntu,suspicious,42.113.165.166,-,-74.01,40.9,1.85.30.174,80,117.18,39.14,TCP,42.113.165.166,(static),bad reputation
+4,2017-07-28 08:08:16.218767,ubuntu,malware,146.185.236.162,-,-77.4,38.36,1.85.30.174,80,117.18,39.14,UDP,146.185.236.162,abuse.ch,bad reputation
+0,2017-07-28 08:03:16.218767,ubuntu,suspicious,1.235.96.136,-,76.97,28.92,1.85.30.174,80,117.18,39.14,ICMP,1.235.96.136,"blocklist.de (+rutgers.edu,turris.cz)",bad reputation
+1,2017-07-28 08:04:25.218767,ubuntu,malware,216.245.205.109,-,11.47,48.33,1.85.30.174,80,117.18,39.14,telnet,216.245.205.109,bambenekconsulting.com,bad reputation
+1,2017-07-28 08:04:25.218767,ubuntu,malware,82.205.5.241,-,-0.44,51.56,1.85.30.174,22,117.18,39.14,UDP,82.205.5.241,bambenekconsulting.com,bad reputation
+3,2017-07-28 08:05:51.218767,ubuntu,suspicious,93.26.111.222,-,135.94,35.52,1.85.30.174,21,117.18,39.14,ssh,93.26.111.222,blocklist.de,bad reputation
+4,2017-07-28 08:06:16.218767,ubuntu,suspicious,91.121.64.83,-,135.71,34.96,1.85.30.174,22,117.18,39.14,ICMP,91.121.64.83,cybercrime-tracker.net,bad reputation
+2,2017-07-28 08:07:10.218767,ubuntu,spammer,176.126.242.49,-,-118.24,34.35,1.85.30.174,22,117.18,39.14,ssh,176.126.242.49,malwaredomains.com,bad reputation
+3,2017-07-28 08:07:16.218767,ubuntu,spammer,42.113.165.166,-,-74.01,40.9,1.85.30.174,1054,117.18,39.14,TCP,42.113.165.166,(static),bad reputation
+4,2017-07-28 08:08:16.218767,ubuntu,suspicious,146.185.236.162,-,-77.4,38.36,1.85.30.174,22,117.18,39.14,telnet,146.185.236.162,abuse.ch,bad reputation
+0,2017-07-28 08:03:16.218767,ubuntu,hacker,1.235.96.136,-,76.97,28.92,1.85.30.174,1054,117.18,39.14,ICMP,1.235.96.136,"blocklist.de (+rutgers.edu,turris.cz)",bad reputation
+1,2017-07-28 08:04:25.218767,ubuntu,hacker,216.245.205.109,-,11.47,48.33,1.85.30.174,22,117.18,39.14,ICMP,216.245.205.109,bambenekconsulting.com,bad reputation
+1,2017-07-28 08:04:25.218767,ubuntu,spammer,82.205.5.241,-,-0.44,51.56,1.85.30.174,22,117.18,39.14,UDP,82.205.5.241,bambenekconsulting.com,bad reputation
+3,2017-07-28 08:05:51.218767,ubuntu,spammer,93.26.111.222,-,135.94,35.52,1.85.30.174,23,117.18,39.14,telnet,93.26.111.222,blocklist.de,bad reputation
+4,2017-07-28 08:06:16.218767,ubuntu,suspicious,91.121.64.83,-,135.71,34.96,1.85.30.174,22,117.18,39.14,ICMP,91.121.64.83,cybercrime-tracker.net,bad reputation
+2,2017-07-28 08:07:10.218767,ubuntu,spammer,176.126.242.49,-,-118.24,34.35,1.85.30.174,22,117.18,39.14,TCP,176.126.242.49,malwaredomains.com,bad reputation
+3,2017-07-28 08:07:16.218767,ubuntu,suspicious,42.113.165.166,-,-74.01,40.9,1.85.30.174,22,117.18,39.14,TCP,42.113.165.166,(static),bad reputation
+4,2017-07-28 08:08:16.218767,ubuntu,spammer,146.185.236.162,-,-77.4,38.36,1.85.30.174,1521,117.18,39.14,UDP,146.185.236.162,abuse.ch,bad reputation
+0,2017-07-28 08:03:16.218767,ubuntu,spammer,1.235.96.136,-,76.97,28.92,1.85.30.174,22,117.18,39.14,ICMP,1.235.96.136,"blocklist.de (+rutgers.edu,turris.cz)",bad reputation
+1,2017-07-28 08:04:25.218767,ubuntu,spammer,216.245.205.109,-,11.47,48.33,1.85.30.174,1054,117.18,39.14,ICMP,216.245.205.109,bambenekconsulting.com,bad reputation
+1,2017-07-28 08:04:25.218767,ubuntu,malware,82.205.5.241,-,-0.44,51.56,1.85.30.174,22,117.18,39.14,UDP,82.205.5.241,bambenekconsulting.com,bad reputation
+3,2017-07-28 08:05:51.218767,ubuntu,hacker,93.26.111.222,-,135.94,35.52,1.85.30.174,1054,117.18,39.14,TCP,93.26.111.222,blocklist.de,bad reputation
+4,2017-07-28 08:06:16.218767,ubuntu,malware,91.121.64.83,-,135.71,34.96,1.85.30.174,22,117.18,39.14,ICMP,91.121.64.83,cybercrime-tracker.net,bad reputation
+2,2017-07-28 08:07:10.218767,ubuntu,malware,176.126.242.49,-,-118.24,34.35,1.85.30.174,1521,117.18,39.14,TCP,176.126.242.49,malwaredomains.com,bad reputation

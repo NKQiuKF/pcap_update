@@ -1,0 +1,40 @@
+{% extends "superset/theme.html" %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../static/css/main.css">
+    <link rel="stylesheet" href="../../static/css/upload.css">
+  {{ super() }}
+{% endblock %}
+
+{% block body %}
+<div class="main">
+<div style="width:100%;text-align:center">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+		<h1 style="text-align:center" >请上传您需要分析的PCAP包</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <form action="" method=post enctype=multipart/form-data>
+       <input type=file multiple name=pcapfile id="pcapfile" class="pcapfile"/>
+       <label for="pcapfile">选择文件</label>
+           <p>请上传pcap文件</p>
+        <br>
+        <input class="btn btn-default" type="submit" value="上传">
+    </form>
+</div>
+</div>
+
+<script src="../../static/lib/js/jquery-2.2.0.js"></script>
+<script src="../../static/js/build/dist/echarts.js"></script>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "superset/theme.html" %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="../../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../static/css/main.css">
+  {{ super() }}
+{% endblock %}
+
+{% block body %}
+<div class="main">
+    <div class="center-block">
+            <h1 style="font-family:verdana,serif;color:#000000; text-align:center">查询页面</h1>
+            <br>
+            <form class="form-horizontal" role="form" method="post">
+                <div class="form-group">
+                    <label for="filename" class="col-sm-4 control-label">文件名</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="filename" name="filename" placeholder="请输入文件名">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ASM_MD5" class="col-sm-4 control-label">ASM_MD5</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="ASM_MD5" name="ASM_MD5" placeholder="请输入ASM文件的MD5值">
+                    </div>
+                </div>
+                  <div class="form-group">
+                    <label for="ASM_SHA1" class="col-sm-4 control-label">ASM_SHA1</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="ASM_SHA1" name="ASM_SHA1" placeholder="请输入ASM文件的SHA1值">
+                    </div>
+                </div>
+                  <div class="form-group">
+                    <label for="Bytes_MD5" class="col-sm-4 control-label">Bytes_MD5</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="Bytes_MD5" name="Bytes_MD5" placeholder="请输入Bytes文件的MD5值">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Bytes_SHA1" class="col-sm-4 control-label">Bytes_SHA1</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="Bytes_SHA1" name="Bytes_SHA1" placeholder="请输入Bytes文件的SHA1值">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="start_time" class="col-sm-4 control-label">起始时间</label>
+                    <div class="col-sm-4">
+                        <input type="datetime" class="form-control" id="start_time" name="start_time" placeholder="2017-12-1 00:00:00">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="end_time" class="col-sm-4 control-label">结束时间</label>
+                    <div class="col-sm-4">
+                        <input type="datetime" class="form-control" id="end_time" name="end_time" placeholder="2017-12-7 00:00:00">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-5 col-sm-5">
+                        <button type="submit" class="btn btn-default">查询</button>
+                    </div>
+                </div>
+            </form>
+             <br>
+             <br>
+             <br>
+        <div class="center-block" id="hint" name="hint" align="center">
+            <h4>提示：</h4>
+            <p>1. 可输入文件名进行查询</p>
+            <p>2. 可输入文件的MD5值或者文件的SHA1值进行查询</p>
+            <p>3. 可选择输入时间段，查询某一段时间内的数据</p>
+        </div>
+
+         <script type="text/javascript">
+             var error_msg = {{ error_msg | safe }}
+                 document.write(error_msg)
+         </script>
+
+    </div>
+</div>
+
+<script src="../../static/lib/js/jquery-2.2.0.js"></script>
+<script src="../../static/js/build/dist/echarts.js"></script>
+{% endblock %}

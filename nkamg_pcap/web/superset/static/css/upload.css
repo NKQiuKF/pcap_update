@@ -1,0 +1,51 @@
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 2.25em;
+    font-weight: 900;
+    color: white;
+    background-color: #f3635e;
+    display: inline-block;
+    cursor: pointer; /* 小手光标*/
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #00a699;
+}
+
+.pcapfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.pcapfile + label {
+    font-size: 2.25em;
+    font-weight: 900;
+    color: white;
+    background-color: #f3635e;
+    display: inline-block;
+    cursor: pointer; /* 小手光标*/
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.pcapfile:focus + label,
+.pcapfile + label:hover {
+    background-color: #00a699;
+}

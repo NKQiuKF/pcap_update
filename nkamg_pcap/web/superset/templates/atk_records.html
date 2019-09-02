@@ -1,0 +1,132 @@
+{% extends "superset/basic.html" %}
+
+{% block head_css %}
+  <link rel="stylesheet" type="text/css" href="../../static/lib/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../static/lib/css/keen-dashboards.css">
+  <link rel="stylesheet" type="text/css" href="../../static/lib/css/dc.min.css">
+  <link rel="stylesheet" type="text/css" href="../../static/lib/css/leaflet.css">
+  <link rel="stylesheet" type="text/css" href="../../static/css/custom.css">
+  {{super()}}
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+  <div class="row">
+        <!-- Time Chart -->
+        <div class="col-sm-8">
+          <div class="chart-wrapper">
+                <div class="chart-title">
+                  攻击数目
+                </div>
+                <div class="chart-stage">
+                  <div id="time-chart"></div>
+                </div>
+          </div>
+        </div>
+        <!-- Time Chart -->
+       
+        <!-- Number of events -->
+        <div class="col-sm-4">
+          <div class="chart-wrapper">
+              <div class="chart-title">
+                事件数目
+              </div>
+              <div class="chart-stage">
+                <div id="number-records-nd"></div>
+              </div>
+          </div>
+        </div>
+        <!-- Number of events -->
+  </div>
+<div class="row">
+
+        <!-- Chinese Province -->
+  <div class="col-sm-2">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+              来源地址统计
+            </div>
+            <div class="chart-stage">
+              <div id="srclocation-row-chart"></div>
+            </div>
+        </div>
+  </div>
+ 
+  <div class="col-sm-2">
+    <div class="chart-wrapper">
+          <div class="chart-title">
+              目的地址统计
+          </div>
+          <div class="chart-stage">
+              <div id="dstlocation-row-chart"></div>
+          </div>
+     </div>
+  </div>
+  <!-- Map -->
+  <div class="col-sm-8">
+      <div class="chart-wrapper">
+            <div class="chart-title">
+              世界地图
+            </div>
+            <div class="chart-stage">
+              <div id="map" style="width: 800px; height: 512px"></div>
+            </div>
+      </div>
+  </div>
+</div>
+
+
+ <div class="row">
+        <!-- Brand -->
+        <div class="col-sm-4">
+          <div class="chart-wrapper">
+              <div class="chart-title">
+                威胁来源
+              </div>
+              <div class="chart-stage">
+                <div id="phone-brand-row-chart"></div>
+              </div>
+          </div>
+        </div>
+        <!-- Brand -->
+
+        <!-- Gender -->
+         <div class="col-sm-4">
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                  情报源
+                </div>
+                <div class="chart-stage">
+                  <div id="gender-row-chart"></div>
+                </div>
+            </div>
+         </div>
+
+          <!-- Age Segment -->
+          <div class="col-sm-4">
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                  威胁种类
+                </div>
+                <div class="chart-stage">
+                  <div id="age-segment-row-chart"></div>
+                </div>
+            </div>
+          </div>
+          <!-- Age Segment -->
+
+</div>
+
+<script src="../../static/lib/js/jquery.min.js"></script>
+<script src="../../static/lib/js/bootstrap.min.js"></script>
+<script src="../../static/lib/js/underscore-min.js"></script>
+<script src="../../static/lib/js/crossfilter.js"></script>
+<script src="../../static/lib/js/d3.min.js"></script>
+<script src="../../static/lib/js/dc.min.js"></script>
+<script src="../../static/lib/js/queue.js"></script>
+<script src="../../static/lib/js/leaflet.js"></script>
+<script src="../../static/lib/js/leaflet-heat.js"></script>
+<script src="../../static/lib/js/keen.min.js"></script>
+<script src='../../static/js/graphs.js' type='text/javascript'></script>
+
+{% endblock %}

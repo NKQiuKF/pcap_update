@@ -1,0 +1,15 @@
+src_ip,gender,atkid,atktype
+60.29.153.43,socks-proxy.net,4,suspious
+221.238.245.22,voipbl.org,1,hacker
+221.238.245.22,bambenekconsulting.com,0,malware
+221.238.245.22,alienvault.com,1,hacker
+202.113.18.106,alienvault.com,1,hacker
+202.113.18.106,snort.org,1,hacker
+202.113.18.106,snort.org,1,hacker
+220.113.60.203,cruzit.com,1,hacker
+220.113.60.203,otx.alienvault.com,0,malware
+123.112.43.6 ,abuse.ch,0,malware
+123.112.43.6 ,cruzit.com,1,hacker
+123.112.43.6 ,otx.alienvault.com,0,malware
+123.112.43.6 ,otx.alienvault.com,0,malware
+123.112.43.6 ,proxylists.net,4,suspious

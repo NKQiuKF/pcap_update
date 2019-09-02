@@ -1,0 +1,248 @@
+
+.all-eqp{
+  position: relative;
+  display: block;
+  min-height: 100px;
+  width: 1000px;
+  height: auto;
+  top: 01px;
+  margin: auto;
+}
+
+
+.one-eqp{
+  margin: 10px;
+  position: relative;
+  top: 20px;
+  left: 10px;
+  width: 230px;
+  height: 325px;
+  background: #dfe9fb;
+}
+
+.one-eqp:hover{
+  box-shadow: 0 0 8px 4px #999;
+}
+
+.one-eqp .top0{
+  position: relative;
+  width: 100%;
+  height: 80px;
+  color: #fff;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+  background: #e61616;
+}
+
+.one-eqp .top1{
+  position: relative;
+  width: 100%;
+  height: 80px;
+  color: #fff;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+  background: #3ac70c;
+}
+
+
+.one-eqp .top .logo{
+  display: block;
+  position: relative;
+  top: 16px;
+  left: 20px;
+  float: left;
+}
+
+.one-eqp .top .label-line{
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.display-none{
+  display: none;
+}
+
+.one-eqp .top .alive-btn{
+  position: relative;
+  top: 14px;
+  left: 100px;
+  width: 120px;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+  background: red;
+}
+
+.one-eqp .top .disable-btn {
+  opacity: 0.4;
+  border: 1px solid #828282;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#727272), to(#626262));
+  background: -moz-linear-gradient(top, #727272, #626262);
+  box-shadow: 0 0 10px #444;
+}
+
+.one-eqp .top .breath-btn {
+  border: 1px solid #2b92d4;
+  color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6cc3fe), to(#21a1d0));
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-name: breathe;
+  -webkit-animation-duration: 1000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+
+  background-image: -moz-linear-gradient(top, #6cc3fe, #21a1d0);
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-name: breathe;
+  -moz-animation-duration: 1000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+
+  animation-timing-function: ease-in-out;
+  animation-name: breathe;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+@-webkit-keyframes breathe {
+  0% {
+   opacity: 0.2;
+   box-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    opacity: 1;
+    border: 1px solid rgba(59, 235, 235, 1);
+    box-shadow: 0 1px 30px rgba(59, 255, 255, 1);
+  }
+}
+
+@-moz-keyframes breathe {
+  0% {
+    opacity: 0.2;
+    box-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    opacity: 1;
+    border: 1px solid rgba(59, 235, 235, 1);
+    box-shadow: 0 1px 30px rgba(59, 255, 255, 1);
+  }
+}
+
+.text{
+  position: relative;
+  padding-top: 10px;
+  width: 100%;
+  height: 1%;
+}
+
+.text-title{
+  position: relative;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  color: #06c;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.text-line{
+  position: relative;
+  margin-top: 2px;
+  width: 100%;
+  min-height: 22px;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+.text-line-left{
+  float: left;
+  width: 90px;
+  height: 100%;
+  text-align: right;
+}
+
+.text-line-right{
+  float: right;
+  right: 10px;
+  width: 130px;
+  height: 100%;
+  text-align: left;
+}
+
+.time{
+  position: relative;
+  margin: 8px auto;
+  width: 90%;
+  height: auto;
+  border: 1px solid #0769ad;
+}
+
+.time-line{
+  position: relative;
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+}
+
+
+
+.text-line-all{
+  float: right;
+  right: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.eqp_name{
+}
+
+.eqp_ip{
+}
+
+.eqp_mac{
+}
+
+.clear-float{
+  position: relative;
+  width: 0;
+  height: 0;
+  clear: both;
+}
+
+.computer{
+  background: #65c147;
+}
+
+.title-text{
+  color: #0e0e0e;
+}
+.vl-text{
+  font-size: 50px;
+}
+
+.btn{
+  position:absolute;
+  display:table;
+  text-align:center;
+  background:#277eea;
+  left:30%;
+  right:50%;
+  top:85%;
+  margin:1%;
+  color:white;
+}

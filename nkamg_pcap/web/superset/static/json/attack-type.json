@@ -1,0 +1,15 @@
+{
+  "type":  "attack type",
+  "data": {
+    "1":{
+      "name": "attack1",
+      "info": "ARP attack"
+    },
+    "2":{
+      "name": "attack2",
+      "info": "DNS attack"
+    }
+  }
+
+
+}
