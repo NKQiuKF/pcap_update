@@ -20,7 +20,7 @@ lxml
 pcapy
 python-engineio
 python-socketio
-Werkzeug==0.10.4
+Werkzeug==0.15.3
 scikit-learn==0.16.0
 xgboost
 joblib==0.11
