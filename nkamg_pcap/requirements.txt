@@ -12,7 +12,7 @@ itsdangerous>=0.24
 Jinja2>=2.8
 dnspython>=1.15.0 
 scapy
-urllib3==1.21.1
+urllib3==1.26.5
 netaddr>=0.7.19
 tqdm
 bokeh
