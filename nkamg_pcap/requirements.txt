@@ -1,6 +1,6 @@
 psutil
 scipy==0.18.1
-numpy==1.14.2
+numpy==1.22.0
 enum34>=1.1.3
 gevent
 eventlet
